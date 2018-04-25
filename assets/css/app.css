@@ -79,3 +79,11 @@ pre {
     top: 100%;
     left: 0;
 }
+
+.uk-h6 {
+    color: #666;
+}
+
+li .uk-card-body {
+    height: 300px;
+}
