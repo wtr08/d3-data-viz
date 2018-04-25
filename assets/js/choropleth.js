@@ -115,6 +115,8 @@ d3.json('assets/data/choropleth/json/nederland.json', function (error, json) {
             var newData = data.filter(function (d) { return d.periode === +value });
             updateMap(newData, value);
             render(value);
+            renderBubble(value);
+            $(".update-text").text(value)
 
         })
     }
