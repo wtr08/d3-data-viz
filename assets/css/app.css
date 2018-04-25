@@ -1,0 +1,81 @@
+.nav-slider{
+    width: 300px;
+    padding-top: 25px;
+}
+
+/* Choropleth */
+
+#map {
+    margin: 1rem 0;
+}
+.d3-tooltip {
+    background: #ffff;
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+}
+
+
+/*Sankey*/
+.node rect {
+    cursor: pointer;
+    fill-opacity: .9;
+    shape-rendering: crispEdges;
+}
+
+.node text {
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff;
+}
+
+.link {
+    fill: none;
+    stroke: #000;
+    stroke-opacity: .2;
+}
+
+.link:hover {
+    stroke-opacity: 1;
+}
+
+/* For code examples */
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+
+.d3-tip {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+    margin: -10px 0 0 0;
+    top: 100%;
+    left: 0;
+}
