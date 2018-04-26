@@ -45,7 +45,7 @@ function renderBubble(year) {
             .offset([-10, 0])
             .html(function(d) {
                 return "<span>Background:</span> <span>" + d.data.Migratieachtergrond + "</span><br/>" +
-                    "<span>Immigranten:</span> <span>" + d3.format(",.2r")(d.data.value); + "</span>";
+                    "<span>Immigranten:</span> <span>" + (d.data.value).toLocaleString('nl'); + "</span>";
             });
 
         svg.call(tip);

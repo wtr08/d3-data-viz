@@ -48,7 +48,7 @@ function render(year) {
 
 
         // Create Legend
-        var titleOfLegend = document.getElementById("information-title").getAttribute("class")
+        var titleOfLegend = document.getElementById("information-title").getAttribute("class");
         if(titleOfLegend){
             generateLegend(data.nodes[titleOfLegend]);
         }
@@ -65,7 +65,7 @@ function render(year) {
             .text(function(d) { return d.name; })
             .filter(function(d) { return d.x0 < width / 2; })
             .attr("x", function(d) { return d.x1 + 6; })
-            .attr("text-anchor", "start")
+            .attr("text-anchor", "start");
 
 
         var link = svg.append("g")
@@ -116,7 +116,7 @@ function generateLegend(d) {
         d.targetLinks.map(function (d,i) {
             names[i] = {
                 afkomst : d.source.name,
-                immigranten :  d3.format(",.2r")(d.value),
+                immigranten :  (d.value).toLocaleString('nl'),
             };
         });
 
