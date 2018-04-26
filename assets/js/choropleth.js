@@ -111,18 +111,17 @@ d3.json('assets/data/choropleth/json/nederland.json', function (error, json) {
         d3.select('#year').on('change', function () {
             var value = this.value;
             // Filter data to have only data that is equal to a specific period
-            var newData = data.filter(function (d) { return d.periode === +value });
-            updateMap(newData, value);
             render(value);
             renderBubble(value);
-            $(".update-text").text(value)
-
         });
 
 
         // Quick fix
         d3.select('#year').on('input', function () {
             var value = this.value;
+            var newData = data.filter(function (d) { return d.periode === +value });
+            updateMap(newData, value);
+            $(".update-text").text(value);
             d3.select('#current-year').text(value);
         });
 
